@@ -1,0 +1,31 @@
+id_venda;data;produto;categoria;quantidade;valor_unitario;estado_cliente
+V001;2025-01-05;Notebook;Informática;1;3500,00;SP
+V002;2025-01-08;Mouse;Acessórios;3;80,00;RJ
+V003;2025-01-12;Teclado;Acessórios;2;150,00;MG
+V004;2025-01-18;Smartphone;Telefonia;1;2200,00;SP
+V005;2025-01-25;Fone Bluetooth;Áudio;4;180,00;PR
+V006;2025-02-03;Monitor;Informática;1;1200,00;BA
+V007;2025-02-07;Notebook;Informática;2;3500,00;RJ
+V008;2025-02-14;Mouse;Acessórios;5;80,00;SP
+V009;2025-02-20;Smartphone;Telefonia;2;2200,00;MG
+V010;2025-02-28;Teclado;Acessórios;3;150,00;PR
+V011;2025-03-04;Monitor;Informática;2;1200,00;SP
+V012;2025-03-10;Fone Bluetooth;Áudio;6;180,00;RJ
+V013;2025-03-15;Notebook;Informática;1;3500,00;BA
+V014;2025-03-21;Smartphone;Telefonia;3;2200,00;SP
+V015;2025-03-29;Mouse;Acessórios;4;80,00;MG
+V016;2025-04-02;Teclado;Acessórios;2;150,00;RJ
+V017;2025-04-09;Monitor;Informática;1;1200,00;PR
+V018;2025-04-16;Fone Bluetooth;Áudio;5;180,00;SP
+V019;2025-04-23;Notebook;Informática;2;3500,00;MG
+V020;2025-04-30;Smartphone;Telefonia;1;2200,00;BA
+V021;2025-05-05;Mouse;Acessórios;8;80,00;SP
+V022;2025-05-11;Monitor;Informática;2;1200,00;RJ
+V023;2025-05-18;Teclado;Acessórios;4;150,00;MG
+V024;2025-05-24;Fone Bluetooth;Áudio;3;180,00;PR
+V025;2025-06-01;Notebook;Informática;1;3500,00;SP
+V026;2025-06-08;Smartphone;Telefonia;2;2200,00;RJ
+V027;2025-06-15;Mouse;Acessórios;6;80,00;BA
+V028;2025-06-22;Monitor;Informática;1;1200,00;MG
+V029;2025-06-28;Teclado;Acessórios;3;150,00;SP
+V030;2025-06-30;Fone Bluetooth;Áudio;4;180,00;RJ

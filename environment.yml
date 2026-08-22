@@ -1,0 +1,14 @@
+name: datamining
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  - numpy
+  - pandas
+  - scipy
+  - matplotlib
+  - seaborn
+  - scikit-learn
+  - jupyterlab
+  - ipykernel
+prefix: /home/petros/miniforge3/envs/datamining

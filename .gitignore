@@ -1,0 +1,11 @@
+# Ambientes e caches locais
+.venv/
+__pycache__/
+*.pyc
+
+# Arquivos temporários e resultados locais
+.DS_Store
+*.log
+
+# Arquivos do Orange gerados localmente (manter workflows importantes explicitamente)
+*.ows.bak
