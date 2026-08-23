@@ -1,0 +1,13 @@
+id_disciplina;disciplina;id_curso
+D001;Introducao a Data Science;C001
+D002;Estatistica Aplicada;C001
+D003;Visualizacao de Dados;C001
+D004;Programacao Orientada a Objetos;C002
+D005;Engenharia de Requisitos;C002
+D006;Arquitetura de Software;C002
+D007;Banco de Dados;C003
+D008;Redes de Computadores;C003
+D009;Sistemas Operacionais;C003
+D010;Gestao Financeira;C004
+D011;Marketing;C004
+D012;Gestao de Pessoas;C004
