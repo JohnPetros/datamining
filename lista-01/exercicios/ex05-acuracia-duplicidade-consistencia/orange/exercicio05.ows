@@ -1,0 +1,109 @@
+<?xml version='1.0' encoding='utf-8'?>
+<scheme version="2.0" title="" description="">
+	<nodes>
+		<node id="0" name="CSV File Import" qualified_name="Orange.widgets.data.owcsvimport.OWCSVFileImport" project_name="Orange3" version="" title="clientes original CSV" position="(332.0, 673.0)" />
+		<node id="1" name="CSV File Import" qualified_name="Orange.widgets.data.owcsvimport.OWCSVFileImport" project_name="Orange3" version="" title="clientes problemáticos CSV" position="(338.0, 534.0)" />
+		<node id="2" name="CSV File Import" qualified_name="Orange.widgets.data.owcsvimport.OWCSVFileImport" project_name="Orange3" version="" title="fonte referência CSV" position="(273.0, 286.0)" />
+		<node id="3" name="Select Rows" qualified_name="Orange.widgets.data.owselectrows.OWSelectRows" project_name="Orange3" version="" title="Selecionar clientes com referência" position="(862.0, 288.0)" />
+		<node id="4" name="Data Table" qualified_name="Orange.widgets.data.owtable.OWTable" project_name="Orange3" version="" title="Comparar estado com referência" position="(1219.0, 264.0)" />
+		<node id="5" name="Merge Data" qualified_name="Orange.widgets.data.owmergedata.OWMergeData" project_name="Orange3" version="" title="Adicionar fonte de referência" position="(546.0, 296.0)" />
+		<node id="6" name="Group by" qualified_name="Orange.widgets.data.owgroupby.OWGroupBy" project_name="Orange3" version="" title="Contar registros por cliente" position="(698.0, 660.0)" />
+		<node id="7" name="Data Table" qualified_name="Orange.widgets.data.owtable.OWTable" project_name="Orange3" version="" title="Verificar duplicidades" position="(1271.0, 687.0)" />
+		<node id="8" name="Select Rows" qualified_name="Orange.widgets.data.owselectrows.OWSelectRows" project_name="Orange3" version="" title="Selecionar clientes duplicados" position="(997.0, 689.0)" />
+		<node id="9" name="Formula" qualified_name="Orange.widgets.data.owfeatureconstructor.OWFeatureConstructor" project_name="Orange3" version="" title="Verificar consistência cidade-estado" position="(824.0, 502.0)" />
+		<node id="10" name="Select Rows" qualified_name="Orange.widgets.data.owselectrows.OWSelectRows" project_name="Orange3" version="" title="Selecionar inconsistências" position="(1132.0, 465.0)" />
+		<node id="11" name="Data Table" qualified_name="Orange.widgets.data.owtable.OWTable" project_name="Orange3" version="" title="Inconsistências encontradas" position="(1419.0, 439.0)" />
+	</nodes>
+	<links>
+		<link id="0" source_node_id="1" sink_node_id="5" source_channel="Data" sink_channel="Data" enabled="true" source_channel_id="data" sink_channel_id="data" />
+		<link id="1" source_node_id="2" sink_node_id="5" source_channel="Data" sink_channel="Extra Data" enabled="true" source_channel_id="data" sink_channel_id="extra_data" />
+		<link id="2" source_node_id="5" sink_node_id="3" source_channel="Data" sink_channel="Data" enabled="true" source_channel_id="data" sink_channel_id="data" />
+		<link id="3" source_node_id="3" sink_node_id="4" source_channel="Matching Data" sink_channel="Data" enabled="true" source_channel_id="matching_data" sink_channel_id="data" />
+		<link id="4" source_node_id="1" sink_node_id="6" source_channel="Data" sink_channel="Data" enabled="true" source_channel_id="data" sink_channel_id="data" />
+		<link id="5" source_node_id="6" sink_node_id="8" source_channel="Data" sink_channel="Data" enabled="true" source_channel_id="data" sink_channel_id="data" />
+		<link id="6" source_node_id="8" sink_node_id="7" source_channel="Matching Data" sink_channel="Data" enabled="true" source_channel_id="matching_data" sink_channel_id="data" />
+		<link id="7" source_node_id="9" sink_node_id="10" source_channel="Data" sink_channel="Data" enabled="true" source_channel_id="data" sink_channel_id="data" />
+		<link id="8" source_node_id="10" sink_node_id="11" source_channel="Matching Data" sink_channel="Data" enabled="true" source_channel_id="matching_data" sink_channel_id="data" />
+		<link id="9" source_node_id="1" sink_node_id="9" source_channel="Data" sink_channel="Data" enabled="true" source_channel_id="data" sink_channel_id="data" />
+	</links>
+	<annotations />
+	<thumbnail />
+	<node_properties>
+		<properties node_id="0" format="literal">{'_session_items': [], '_session_items_v2': [({'type': 'AbsPath', 'path': '/home/petros/conda-envs/datamining/lista-01/exercicios/ex05-acuracia-duplicidade-consistencia/dados/clientes_original.csv'}, {'encoding': 'utf-8', 'delimiter': ';', 'quotechar': '"', 'doublequote': True, 'skipinitialspace': True, 'quoting': 0, 'columntypes': [{'start': 0, 'stop': 1, 'value': 'Categorical'}, {'start': 1, 'stop': 2, 'value': 'Numeric'}, {'start': 2, 'stop': 4, 'value': 'Categorical'}, {'start': 4, 'stop': 7, 'value': 'Numeric'}], 'rowspec': [{'start': 0, 'stop': 1, 'value': 'Header'}], 'decimal_separator': '.', 'group_separator': ''})], 'compatibility_mode': False, 'controlAreaVisible': True, 'dialog_state': {'directory': '/home/petros/conda-envs/datamining/lista-01/exercicios/ex05-acuracia-duplicidade-consistencia/dados', 'filter': 'Text - comma separated (*.csv, *)'}, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x02\xf0\x00\x00\x01\xc4\x00\x00\x04u\x00\x00\x03c\x00\x00\x03\x16\x00\x00\x01\xff\x00\x00\x04O\x00\x00\x03=\x00\x00\x00\x00\x00\x00\x00\x00\x07\x80\x00\x00\x03\x16\x00\x00\x01\xff\x00\x00\x04O\x00\x00\x03=', '__version__': 3}</properties>
+		<properties node_id="1" format="literal">{'_session_items': [], '_session_items_v2': [({'type': 'AbsPath', 'path': '/home/petros/conda-envs/datamining/lista-01/exercicios/ex05-acuracia-duplicidade-consistencia/dados/clientes_problematicos.csv'}, {'encoding': 'utf-8', 'delimiter': ';', 'quotechar': '"', 'doublequote': True, 'skipinitialspace': True, 'quoting': 0, 'columntypes': [{'start': 0, 'stop': 1, 'value': 'Categorical'}, {'start': 1, 'stop': 2, 'value': 'Numeric'}, {'start': 2, 'stop': 4, 'value': 'Categorical'}, {'start': 4, 'stop': 7, 'value': 'Numeric'}], 'rowspec': [{'start': 0, 'stop': 1, 'value': 'Header'}], 'decimal_separator': '.', 'group_separator': ''})], 'compatibility_mode': False, 'controlAreaVisible': True, 'dialog_state': {'directory': '/home/petros/conda-envs/datamining/lista-01/exercicios/ex05-acuracia-duplicidade-consistencia/dados', 'filter': 'Text - comma separated (*.csv, *)'}, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x03\xc3\x00\x00\x02;\x00\x00\x05H\x00\x00\x03\xda\x00\x00\x03\xe9\x00\x00\x02v\x00\x00\x05"\x00\x00\x03\xb4\x00\x00\x00\x00\x00\x00\x00\x00\x07\x80\x00\x00\x03\xe9\x00\x00\x02v\x00\x00\x05"\x00\x00\x03\xb4', '__version__': 3}</properties>
+		<properties node_id="2" format="literal">{'_session_items': [], '_session_items_v2': [({'type': 'AbsPath', 'path': '/home/petros/conda-envs/datamining/lista-01/exercicios/ex05-acuracia-duplicidade-consistencia/dados/fonte_referencia.csv'}, {'encoding': 'utf-8', 'delimiter': ';', 'quotechar': '"', 'doublequote': True, 'skipinitialspace': True, 'quoting': 0, 'columntypes': [{'start': 0, 'stop': 2, 'value': 'Categorical'}], 'rowspec': [{'start': 0, 'stop': 1, 'value': 'Header'}], 'decimal_separator': '.', 'group_separator': ''}), ({'type': 'AbsPath', 'path': '/home/petros/conda-envs/datamining/lista-01/exercicios/ex05-acuracia-duplicidade-consistencia/dados/clientes_problematicos.csv'}, {'encoding': 'utf-8', 'delimiter': ';', 'quotechar': '"', 'doublequote': True, 'skipinitialspace': True, 'quoting': 0, 'columntypes': [{'start': 0, 'stop': 1, 'value': 'Categorical'}, {'start': 1, 'stop': 2, 'value': 'Numeric'}, {'start': 2, 'stop': 4, 'value': 'Categorical'}, {'start': 4, 'stop': 7, 'value': 'Numeric'}], 'rowspec': [{'start': 0, 'stop': 1, 'value': 'Header'}], 'decimal_separator': '.', 'group_separator': ''})], 'compatibility_mode': False, 'controlAreaVisible': True, 'dialog_state': {'directory': '/home/petros/conda-envs/datamining/lista-01/exercicios/ex05-acuracia-duplicidade-consistencia/dados', 'filter': 'Text - comma separated (*.csv, *)'}, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x03\xc9\x00\x00\x02V\x00\x00\x05N\x00\x00\x03\xf5\x00\x00\x03\xef\x00\x00\x02\x91\x00\x00\x05(\x00\x00\x03\xcf\x00\x00\x00\x00\x00\x00\x00\x00\x07\x80\x00\x00\x03\xef\x00\x00\x02\x91\x00\x00\x05(\x00\x00\x03\xcf', '__version__': 3}</properties>
+		<properties node_id="3" format="pickle">gASV0gEAAAAAAAB9lCiMC2F1dG9fY29tbWl0lIiMEmNvbnRyb2xBcmVhVmlzaWJsZZSIjBBwdXJn
+ZV9hdHRyaWJ1dGVzlImMDXB1cmdlX2NsYXNzZXOUiYwTc2F2ZWRXaWRnZXRHZW9tZXRyeZRDQgHZ
+0MsAAwAAAAADxQAAAdYAAAZoAAADxgAAA+sAAAIRAAAGQgAAA6AAAAAAAAAAAAeAAAAD6wAAAhEA
+AAZCAAADoJSMEHVwZGF0ZV9vbl9jaGFuZ2WUiIwLX192ZXJzaW9uX1+USwKMEGNvbnRleHRfc2V0
+dGluZ3OUXZSMFW9yYW5nZXdpZGdldC5zZXR0aW5nc5SMB0NvbnRleHSUk5QpgZR9lCiMBnZhbHVl
+c5R9lCiMCmNvbmRpdGlvbnOUXZQojA5lc3RhZG9fY29ycmV0b5RLAUsDXZR0lGFoCEsCdYwKYXR0
+cmlidXRlc5R9lCiMCmlkX2NsaWVudGWUSwGMBWlkYWRllEsCjAZjaWRhZGWUSwGMBmVzdGFkb5RL
+AYwFcmVuZGGUSwKMEnF1YW50aWRhZGVfY29tcHJhc5RLAowTdmFsb3JfdG90YWxfY29tcHJhc5RL
+AmgUSwF1jAVtZXRhc5R9lHViYXUu
+</properties>
+		<properties node_id="4" format="literal">{'auto_commit': True, 'color_by_class': True, 'controlAreaVisible': True, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x07\x7f\x00\x00\x04\x07\x00\x00\x00\xee\x00\x00\x00\xd8\x00\x00\x04\r\x00\x00\x02\xcb\x00\x00\x00\x00\x02\x00\x00\x00\x07\x80\x00\x00\x00\x06\x00\x00\x00\x1b\x00\x00\x07y\x00\x00\x04\x01', 'select_rows': True, 'show_attribute_labels': True, 'show_distributions': False, 'stored_selection': {'rows': [], 'columns': []}, 'stored_sort': [], '__version__': 1}</properties>
+		<properties node_id="5" format="pickle">gASVvwEAAAAAAAB9lCiMCmF1dG9fYXBwbHmUiIwSY29udHJvbEFyZWFWaXNpYmxllIiMB21lcmdp
+bmeUSwCME3NhdmVkV2lkZ2V0R2VvbWV0cnmUQ0IB2dDLAAMAAAAAA3QAAAKYAAAFmQAAA/0AAAOa
+AAAC0wAABXMAAAPXAAAAAAAAAAAHgAAAA5oAAALTAAAFcwAAA9eUjAtfX3ZlcnNpb25fX5RLAowQ
+Y29udGV4dF9zZXR0aW5nc5RdlIwVb3Jhbmdld2lkZ2V0LnNldHRpbmdzlIwHQ29udGV4dJSTlCmB
+lH2UKIwGdmFsdWVzlH2UKIwKYXR0cl9wYWlyc5RdlF2UKIwKaWRfY2xpZW50ZZRLZYaUjAppZF9j
+bGllbnRllEtlhpRlYWgGSwJ1jAp2YXJpYWJsZXMxlH2UKGgTS2WMBWlkYWRllEtmjAZjaWRhZGWU
+S2WMBmVzdGFkb5RLZYwFcmVuZGGUS2aMEnF1YW50aWRhZGVfY29tcHJhc5RLZowTdmFsb3JfdG90
+YWxfY29tcHJhc5RLZnWMCnZhcmlhYmxlczKUfZQoaBVLZYwOZXN0YWRvX2NvcnJldG+US2V1dWJh
+dS4=
+</properties>
+		<properties node_id="6" format="pickle">gASV4gEAAAAAAAB9lCiMC2F1dG9fY29tbWl0lIiMEmNvbnRyb2xBcmVhVmlzaWJsZZSIjBNzYXZl
+ZFdpZGdldEdlb21ldHJ5lENCAdnQywADAAAAAAL0AAAA5AAABo0AAAM4AAADGgAAAR8AAAZnAAAD
+EgAAAAAAAAAAB4AAAAMaAAABHwAABmcAAAMSlIwLX192ZXJzaW9uX1+USwGMEGNvbnRleHRfc2V0
+dGluZ3OUXZSMFW9yYW5nZXdpZGdldC5zZXR0aW5nc5SMB0NvbnRleHSUk5QpgZR9lCiMBnZhbHVl
+c5R9lCiMDGFnZ3JlZ2F0aW9uc5R9lCiMCmlkX2NsaWVudGWUS2WGlI+UKIwFQ291bnSUkIwFaWRh
+ZGWUS2aGlI+UjAZjaWRhZGWUS2WGlI+UjAZlc3RhZG+US2WGlI+UjAVyZW5kYZRLZoaUj5SMEnF1
+YW50aWRhZGVfY29tcHJhc5RLZoaUj5SME3ZhbG9yX3RvdGFsX2NvbXByYXOUS2aGlI+UdUr8////
+hpSMCGdiX2F0dHJzlF2UaBFLZYaUYUr9////hpRoBUsBdYwKYXR0cmlidXRlc5R9lChoEUsBaBVL
+AmgYSwFoG0sBaB5LAmghSwJoJEsCdYwFbWV0YXOUfZR1YmF1Lg==
+</properties>
+		<properties node_id="7" format="literal">{'auto_commit': True, 'color_by_class': True, 'controlAreaVisible': True, 'savedWidgetGeometry': b"\x01\xd9\xd0\xcb\x00\x03\x00\x00\xff\xff\xff\xe0\xff\xff\xff\xe0\x00\x00\x07\x9f\x00\x00\x04'\x00\x00\x00\xee\x00\x00\x00\xd8\x00\x00\x04\r\x00\x00\x02\xcb\x00\x00\x00\x00\x02\x00\x00\x00\x07\x80\x00\x00\x00\x06\x00\x00\x00\x1b\x00\x00\x07y\x00\x00\x04\x01", 'select_rows': True, 'show_attribute_labels': True, 'show_distributions': False, 'stored_selection': {'rows': [], 'columns': []}, 'stored_sort': [], '__version__': 1}</properties>
+		<properties node_id="8" format="pickle">gASVhwEAAAAAAAB9lCiMC2F1dG9fY29tbWl0lIiMEmNvbnRyb2xBcmVhVmlzaWJsZZSIjBBwdXJn
+ZV9hdHRyaWJ1dGVzlImMDXB1cmdlX2NsYXNzZXOUiYwTc2F2ZWRXaWRnZXRHZW9tZXRyeZRDQgHZ
+0MsAAwAAAAADuQAAAaAAAAZcAAADkAAAA98AAAHbAAAGNgAAA2oAAAAAAAAAAAeAAAAD3wAAAdsA
+AAY2AAADapSMEHVwZGF0ZV9vbl9jaGFuZ2WUiIwLX192ZXJzaW9uX1+USwKMEGNvbnRleHRfc2V0
+dGluZ3OUXZSMFW9yYW5nZXdpZGdldC5zZXR0aW5nc5SMB0NvbnRleHSUk5QpgZR9lCiMBnZhbHVl
+c5R9lCiMCmNvbmRpdGlvbnOUXZQojBJpZF9jbGllbnRlIC0gQ291bnSUSwJLBF2URz/wAAAAAAAA
+YXSUYWgISwJ1jAphdHRyaWJ1dGVzlH2UaBRLAnOMBW1ldGFzlH2UjAppZF9jbGllbnRllEsBc3Vi
+YXUu
+</properties>
+		<properties node_id="9" format="pickle">gASVGQMAAAAAAAB9lCiMEmNvbnRyb2xBcmVhVmlzaWJsZZSIjAxjdXJyZW50SW5kZXiUSwCMC2Rl
+c2NyaXB0b3JzlF2UjChPcmFuZ2Uud2lkZ2V0cy5kYXRhLm93ZmVhdHVyZWNvbnN0cnVjdG9ylIwU
+Q29udGludW91c0Rlc2NyaXB0b3KUk5QojA1pbmNvbnNpc3RlbnRllFjgAQAAMSBpZiAoKGNpZGFk
+ZSA9PSAiU2FvIFBhdWxvIiBhbmQgZXN0YWRvICE9ICJTUCIpIG9yIChjaWRhZGUgPT0gIkNhbXBp
+bmFzIiBhbmQgZXN0YWRvICE9ICJTUCIpIG9yIChjaWRhZGUgPT0gIlNhbnRvcyIgYW5kIGVzdGFk
+byAhPSAiU1AiKSBvciAoY2lkYWRlID09ICJSaW8gZGUgSmFuZWlybyIgYW5kIGVzdGFkbyAhPSAi
+UkoiKSBvciAoY2lkYWRlID09ICJOaXRlcm9pIiBhbmQgZXN0YWRvICE9ICJSSiIpIG9yIChjaWRh
+ZGUgPT0gIkJlbG8gSG9yaXpvbnRlIiBhbmQgZXN0YWRvICE9ICJNRyIpIG9yIChjaWRhZGUgPT0g
+IlViZXJsYW5kaWEiIGFuZCBlc3RhZG8gIT0gIk1HIikgb3IgKGNpZGFkZSA9PSAiQ3VyaXRpYmEi
+IGFuZCBlc3RhZG8gIT0gIlBSIikgb3IgKGNpZGFkZSA9PSAiU2FsdmFkb3IiIGFuZCBlc3RhZG8g
+IT0gIkJBIikgb3IgKGNpZGFkZSA9PSAiRmVpcmEgZGUgU2FudGFuYSIgYW5kIGVzdGFkbyAhPSAi
+QkEiKSkgZWxzZSAwlE6JdJSBlGGMF2V4cHJlc3Npb25zX3dpdGhfdmFsdWVzlImME3NhdmVkV2lk
+Z2V0R2VvbWV0cnmUQ0IB2dDLAAMAAAAAA9YAAAGlAAAGpgAAA/kAAAP8AAAB4AAABoAAAAPTAAAA
+AAAAAAAHgAAAA/wAAAHgAAAGgAAAA9OUjAtfX3ZlcnNpb25fX5RLBIwQY29udGV4dF9zZXR0aW5n
+c5RdlHUu
+</properties>
+		<properties node_id="10" format="pickle">gASVPAIAAAAAAAB9lCiMC2F1dG9fY29tbWl0lIiMEmNvbnRyb2xBcmVhVmlzaWJsZZSIjBBwdXJn
+ZV9hdHRyaWJ1dGVzlImMDXB1cmdlX2NsYXNzZXOUiYwTc2F2ZWRXaWRnZXRHZW9tZXRyeZRDQgHZ
+0MsAAwAAAAADywAAAfEAAAZuAAAD4QAAA/EAAAIsAAAGSAAAA7sAAAAAAAAAAAeAAAAD8QAAAiwA
+AAZIAAADu5SMEHVwZGF0ZV9vbl9jaGFuZ2WUiIwLX192ZXJzaW9uX1+USwKMEGNvbnRleHRfc2V0
+dGluZ3OUXZQojBVvcmFuZ2V3aWRnZXQuc2V0dGluZ3OUjAdDb250ZXh0lJOUKYGUfZQojAZ2YWx1
+ZXOUfZQojApjb25kaXRpb25zlF2UKIwNaW5jb25zaXN0ZW50ZZRLAksEXZRHAAAAAAAAAABhdJRh
+aAhLAnWMCmF0dHJpYnV0ZXOUfZQojAppZF9jbGllbnRllEsBjAVpZGFkZZRLAowGY2lkYWRllEsB
+jAZlc3RhZG+USwGMBXJlbmRhlEsCjBJxdWFudGlkYWRlX2NvbXByYXOUSwKME3ZhbG9yX3RvdGFs
+X2NvbXByYXOUSwJoFEsCdYwFbWV0YXOUfZR1YmgNKYGUfZQoaBB9lChoEl2UKIwNaW5jb25zaXN0
+ZW50ZZRLA0sAjACUhZR0lGFoCEsCdWgXfZQoaBlLAWgaSwJoG0sBaBxLAWgdSwJoHksCaB9LAnVo
+IH2UaCZLA3N1YmV1Lg==
+</properties>
+		<properties node_id="11" format="literal">{'auto_commit': True, 'color_by_class': True, 'controlAreaVisible': True, 'savedWidgetGeometry': b"\x01\xd9\xd0\xcb\x00\x03\x00\x00\xff\xff\xff\xe0\xff\xff\xff\xe0\x00\x00\x07\x9f\x00\x00\x04'\x00\x00\x00\xee\x00\x00\x00\xd8\x00\x00\x04\r\x00\x00\x02\xcb\x00\x00\x00\x00\x02\x00\x00\x00\x07\x80\x00\x00\x00\x06\x00\x00\x00\x1b\x00\x00\x07y\x00\x00\x04\x01", 'select_rows': True, 'show_attribute_labels': True, 'show_distributions': False, 'stored_selection': {'rows': [], 'columns': []}, 'stored_sort': [], '__version__': 1}</properties>
+	</node_properties>
+	<session_state>
+		<window_groups />
+	</session_state>
+</scheme>
