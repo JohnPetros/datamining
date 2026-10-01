@@ -1,0 +1,7 @@
+id_transacao,tipo,descricao,anomalia_observavel
+T121,valor_extremo,"R$ 8.000 por um item, muito acima do padrão da loja.",True
+T122,quantidade_extrema,"45 itens em uma compra, contra 1 a 5 nas compras usuais.",True
+T123,desconto_extremo,"Desconto de 95%, fora da política simulada de até 15%.",True
+T124,combinacao,"Valor e quantidade dentro das faixas globais, mas R$ 1.100 por um item de papelaria é incompatível com o padrão da categoria.",True
+T125,combinacao,R$ 45 por quatro eletrônicos: valor por item muito baixo para a categoria.,True
+T126,indevida_sem_desvio,Compra confirmada como indevida no cenário fictício; atributos comuns podem não revelar o caso ao modelo.,False
