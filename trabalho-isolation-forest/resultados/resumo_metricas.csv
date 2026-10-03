@@ -1,0 +1,5 @@
+Métrica,Cálculo,Percentual,Interpretação
+Acurácia,(118 + 4) / 126,"96,8%",Acertos entre todos os registros.
+Precisão,4 / (4 + 3),"57,1%",Anomalias corretas entre os alertas emitidos.
+Recall,4 / (4 + 1),"80,0%",Anomalias encontradas entre as anomalias observáveis.
+F1,2 × 4 / (2 × 4 + 3 + 1),"66,7%",Média harmônica entre precisão e recall.

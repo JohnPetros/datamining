@@ -13,6 +13,8 @@ Grupo 4: Thiago Martins, Gabriel da Silva, Kauan Fonseca, João Pedro Carvalho e
 - `gerar_dados.py`: geração reproduzível da base, com semente 42.
 - `enunciado/Trabalhos_25092026.pdf`: enunciado do trabalho.
 
+- `roteiro_apresentacao.md`: roteiro de fala dos cinco integrantes, organizado por slides.
+
 ## Cenário e requisitos
 
 Uma loja online vende itens de papelaria, casa e eletrônicos. O objetivo é priorizar compras incomuns para investigação, sem tratar toda anomalia como fraude.
@@ -37,7 +39,7 @@ Os três preços-base da simulação são aproximadamente R$ 35, R$ 100 e R$ 250
 
 ## Resultados da execução
 
-O modelo sinalizou **7 transações**, recuperou **4 de 5 anomalias observáveis** e produziu **3 falsos positivos**. Precisão: **57,1%**; recall: **80,0%**. O gabarito não participa do ajuste, e o parâmetro de 5% foi fixado antes da avaliação.
+O modelo sinalizou **7 transações**, recuperou **4 de 5 anomalias observáveis** e produziu **3 falsos positivos**. Acurácia: **96,8%**; precisão: **57,1%**; recall: **80,0%**; F1: **66,7%**. O notebook apresenta uma tabela com os cálculos e as interpretações, também salva em `resultados/resumo_metricas.csv`. Um modelo sem nenhum alerta já teria acurácia de **96,0%**, mas recall de **0%**; por isso, acurácia alta sozinha não demonstra boa detecção. O gabarito não participa do ajuste, e o parâmetro de 5% foi fixado antes da avaliação.
 
 | Caso | Contexto | Resultado |
 |---|---|---|
