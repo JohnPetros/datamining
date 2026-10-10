@@ -9,6 +9,8 @@ dependencies:
   - matplotlib
   - seaborn
   - scikit-learn
+  - requests
+  - beautifulsoup4
   - jupyterlab
   - ipykernel
 prefix: /home/petros/miniforge3/envs/datamining
